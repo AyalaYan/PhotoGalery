@@ -1,0 +1,58 @@
+﻿<!DOCTYPE HTML >
+<html ng-app="photoApp">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{{title}}</title>
+
+    <link href="../Content/bootstrap.css" rel="stylesheet" />    
+    <link href="../Content/Site.css" rel="stylesheet" />
+    <link href="photo/photo.css" rel="stylesheet" />
+</head>
+<body dir="rtl"> 
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand">Application name</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        <!--<img ng-src="{{ChrysanthemumImage.src | imageUrl }}" />-->
+        <!--<img ng-src="{{ChrysanthemumImage.src | imageUrl}}" />-->
+        <div ng-view></div>
+           <hr />
+        <footer>
+            <!--<p>&copy; {{currentDate | date: "dd/MM/yyyy"}} - My AngularJs Application</p-->
+            <p>&copy; {{currentDate}} - My AngularJs Application</p>
+            <span ng-bind="currentDate |  date: 'dd /MM/yyyy'"></span>
+        </footer>
+    </div>
+
+
+    <script src="../Scripts/angular.js"></script>
+    <script src="../Scripts/angular-route.js"></script>
+    <script src="../Scripts/angular-animate.js"></script>
+
+    <script src="app.mdl.js"></script>
+    <script src="photo/photo.ctrl.js"></script>
+    <script src="login/login.ctrl.js"></script>
+
+    <script src="common/services/login.srv.js"></script>
+    <script src="common/filters/imageUrl.flt.js"></script>
+    <!--<script src="common/services/imageUr.srv.js"></script-->
+    <script src="common/directives/photoSlider/photoSlider.drt.js"></script>
+    <script src="common/directives/photo-img/photoImg.drt.js"></script>
+    <script src="app.route.js"></script>
+</body>
+</html>

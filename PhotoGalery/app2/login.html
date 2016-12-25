@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="../Content/bootstrap.css" rel="stylesheet" />
+    <script src="../Scripts/jquery-1.10.2.js"></script>
+    <script src="../Scripts/respond.js"></script>
+    <script src="login.js"></script>
+</head>
+<body dir="rtl">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-md-offset-3">
+                <div role="form">
+                    <div class="form-group">
+                        <label for="name">שם</label>
+                        <input class="form-control" id="name" name="name" />
+                    </div>
+                    <div class="form-group">
+                        <label for="password">שם</label>
+                        <input type="password" class="form-control" id="password" name="password" />
+                    </div>
+                    <div class="form-group">
+                        <button class="form-control btn btn-primary" disabled="disabled" id="save" onclick="login()">כניסה</button>
+                        <span id="spSuccess" class="hide label-success"></span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div id="greet" class="hide">
+            שלום,
+            <div id="nameRepeat"></div>
+        </div>
+    </div>
+
+</body>
+</html>

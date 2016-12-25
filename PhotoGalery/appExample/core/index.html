@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<!-- פה סימנו את ה ng-app
+    זה אומר שמפה והלאה אנגולר יודעת לזהות את הדיירקטיבס שלה,
+    לכן התוכן של 
+    האלמנטים שלפני כן לא יזוהה כמאפיינים של אנגולר
+    -->
+<html ng-app="photoApp">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <!--ביטוי של אנגולר
+        שנקרא expression
+        אנגולר בודקת תחת איזה סקופ זה נמצא , אין כאן קונטרולר,
+        לכן היא ניגשת לסקופ הראשי:
+        $rootScope
+        ומציגה אותו, אם הוא קיים
+     -->
+    <title>{{title}}</title>
+    <!--הטענת כל ה Css
+        של המערכת
+        מתבצע בד"כ בראש הדף-->
+    <link href="../../Content/bootstrap.css" rel="stylesheet" />
+    <link href="../../Content/Site.css" rel="stylesheet" />
+    <link href="photo/photo.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand"> Application name</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a></a></li>
+                    <li><a></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+
+        <!--פה יש דיירקטיב של הראוטינג
+            (Route)
+            הדיירקטיב יוצר אירוע שמנטר את פעולת ה
+            URL
+            בכל שינוי של ה
+            URL
+            הוא משווה מול ההגדרות שנתנו לו ב
+            $routeProvider
+            אם הוא מוצא הוא
+            מכניס את התוכן של הטימפלייט לתוך הדיב הזה
+            וגם הדיב הזה כעת יהיה שייך לכונטרולר שנתנו -->
+        <div ng-view >
+
+        </div>
+
+        <hr />
+        <footer>
+            <!--שוב ביטוי של אנגולר,
+            currentDate
+            לא קיים תחת כונטרולר
+            לכן אנגולר תחפש אותה תחת הסקופ הראשי שזה
+             $rootScope-->
+            <p>&copy; {{currentDate}} - My Angular Application</p>
+        </footer>
+    </div>
+
+    <!--את כל הסקריפטים עדיף לשים בסוף הדף, כי הם יופעלו אחרי שה
+        DOM
+        יוטען ולכן כשננסה לגשת לאחד המשתנים הם יהיו מוכרים
+        לדוגמא:
+        document.getElementById("..")
+    -->
+    <!--יש סדר לחשיבות ההטענה של הדפים
+        קודם יש להטעין את אנגולר
+        כדי שהמשתנים של אנגולר יהיו מוכרים בדף
+        ונוכל לגשת אליהם מדפים אחרים-->
+    <script src="../../Scripts/angular.js"></script>
+    <script src="../../Scripts/angular-route.js"></script>
+
+    <script src="app.mdl.js"></script>
+    <script src="app.route.js"></script>
+
+    <script src="login/login.ctrl.js"></script>
+    <script src="photo/photo.ctrl.js"></script>
+    <script src="../common/services/login.srv.js"></script>
+
+</body>
+</html>

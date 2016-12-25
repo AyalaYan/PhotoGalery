@@ -1,0 +1,32 @@
+﻿<div id="photo">
+    <h1>Slider Using AngularJS</h1>
+    current index: {{photoVm.currentIndex}}
+    <div class="slider">
+
+        <div class="slide" ng-repeat="image in photoVm.images" ng-if="image.visible" >
+            <!--<img ng-src="/app/common/images/{{::image.src}}" />-->
+
+            <!--A- attribute-->
+            <div photo-img="red" abc="1" def="2"></div>
+            <!--C- class-->
+            <div class="photo-img:blue"></div>
+            <!--E- element-->
+            <photo-img></photo-img>
+            <!--M- comment-->
+            <!-- directive: photo-img green-->
+            <br />
+
+        </div>
+        <div class="slide-bottom" ng-repeat="image in photoVm.imagesSmall">
+            <img ng-src="/app/common/images/{{::image.src}}" />
+        </div>
+        <div class="arrows">
+            <a ng-click="photoVm.next()">
+                <img src="/app/common/images/right-arrow.png" />
+            </a>
+            <a ng-click="photoVm.prev()">
+                <img src="/app/common/images/left-arrow.png" />
+            </a>
+        </div>
+    </div>
+</div>

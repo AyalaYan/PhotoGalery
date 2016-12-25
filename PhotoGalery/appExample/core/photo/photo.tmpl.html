@@ -1,0 +1,9 @@
+﻿<div id="photo">
+    <h1>Slider Using AngularJS</h1>
+    <div class="slider">
+        <div class="slide" ng-repeat="image in photoVM.images  track by $index " >
+            <img ng-src="/app/common/images/{{image.src}}" />
+        </div>
+        
+    </div>
+</div>

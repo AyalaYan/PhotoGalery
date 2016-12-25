@@ -1,0 +1,12 @@
+﻿
+<button class="btn btn-primary"  ng-click="clickMe()"></button><br />
+Watchers:  {{watchers}}<br />
+
+vm.currentIndex:{{photoVm.currentIndex}}
+
+
+<photo-slider images="photoVm.images2" start="photoVm.currentIndex" alert="alertMe()" ></photo-slider>
+
+<photo-slider images="photoVm.images" start="photoVm.currentIndex" alert="alertMe()"></photo-slider>
+
+

@@ -1,0 +1,45 @@
+﻿
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 col-md-offset-3">
+            <div role="form">
+                <div class="form-group">
+                    <label for="name">שם</label>
+                    <input class="form-control" ng-model="loginVm.user.name" />
+                </div>
+                <div class="form-group">
+                    <label for="password">שם</label>
+                    <input type="password" class="form-control" ng-model="loginVm.user.password" />
+                </div>
+                <div class="form-group">
+                    <button class="form-control btn btn-primary" ng-disabled="!loginVm.user.name" ng-click="loginVmlogin()">כניסה</button>
+                    <span ng-bind="loginVm.spSuccess" ng-class="{ 'label-success': loginVm.user.success,'label-danger': !loginVm.user.success, 'tttt': true}"></span>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    {{loginVm.nameee}}
+    <div ng-controller="uuuuCtrl as uuuuVM">
+        {{uuuuVM.nameee}}
+        <br />
+        <!--my parent control is : {{$parent.nameee}}-->
+        my parent control is : {{loginVm.nameee}}
+    </div>
+    <div id="greet" ng-hide="!loginVm.user.name">
+        שלום,
+        {{loginVm.user.name}}<br />
+        loginVm.user.name<br /><br /><br />
+  ddd
+
+              <span ng-bind="loginVm.user.name"></span><br />
+        <span ng:bind="loginVm.user.name"></span><br />
+        <span ng_bind="loginVm.user.name"></span><br />
+        <span data-ng-bind="loginVm.user.name"></span><br />
+        <span x-ng-bind="loginVm.user.name"></span><br />
+    </div>
+</div>
+<!--<div  id="App2"  ng-controller="loginCtrl">
+    {{name}}
+</div>-->
